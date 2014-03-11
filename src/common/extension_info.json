@@ -1,11 +1,11 @@
 {
     "content_scripts": [], 
-    "description": "Extension description", 
+    "description": "SM.org cross-browser extension.", 
     "creator": "Berat \"grafitus\" Dogan", 
     "background_scripts": [
         "main.js"
     ], 
-    "homepage_url": "http://kangoextensions.com/", 
+    "homepage_url": "https://github.com/grafitus/simplemachines_notifier", 
     "version": "0.9.0", 
     "browser_button": {
         "caption": "Simple Machines", 
