@@ -15,8 +15,8 @@
         <em:creator>Berat &quot;grafitus&quot; Dogan</em:creator>
         <em:homepageURL>https://github.com/grafitus/simplemachines_notifier</em:homepageURL>
         <em:iconURL>chrome://kango-c211e525-b3ca-4ada-b6ad-66bc091e6196/content/icons/icon32.png</em:iconURL>
-        
-        
+        <em:optionsURL>chrome://kango-c211e525-b3ca-4ada-b6ad-66bc091e6196/content/options.html</em:optionsURL>
+        <em:optionsType>3</em:optionsType>
         
     </Description>
 </RDF>

@@ -1,19 +1,20 @@
 {
     "kango_version": "1.3.1 ba4b80d08b67", 
     "content_scripts": [], 
-    "description": "SM.org cross-browser extension.", 
+    "name": "SMF Notifier", 
     "creator": "Berat \"grafitus\" Dogan", 
+    "description": "SM.org cross-browser extension.", 
     "kango_package_id": "dev", 
     "background_scripts": [
         "main.js"
     ], 
     "homepage_url": "https://github.com/grafitus/simplemachines_notifier", 
     "version": "0.9.0", 
+    "options_page": "options.html", 
+    "id": "{1B548416-D56F-4024-8FB4-3680EC6276FD}", 
     "browser_button": {
         "caption": "Simple Machines", 
         "tooltipText": "Takes you to simplemachines.org", 
         "icon": "icons/button.png"
-    }, 
-    "id": "{1B548416-D56F-4024-8FB4-3680EC6276FD}", 
-    "name": "SMF Notifier"
+    }
 }
