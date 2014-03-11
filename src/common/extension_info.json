@@ -1,0 +1,16 @@
+{
+    "content_scripts": [], 
+    "description": "Extension description", 
+    "creator": "Berat \"grafitus\" Dogan", 
+    "background_scripts": [
+        "main.js"
+    ], 
+    "homepage_url": "http://kangoextensions.com/", 
+    "version": "0.9.0", 
+    "browser_button": {
+        "caption": "Simple Machines", 
+        "icon": "icons/button.png", 
+        "tooltipText": "Takes you to simplemachines.org"
+    }, 
+    "name": "SMF Notifier"
+}
