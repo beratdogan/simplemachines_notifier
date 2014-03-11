@@ -1,7 +1,9 @@
 {
-    "content_scripts": [], 
+    "name": "SMF Notifier",
     "description": "SM.org cross-browser extension.", 
     "creator": "Berat \"grafitus\" Dogan", 
+    "options_page": "options.html",
+    "content_scripts": [],
     "background_scripts": [
         "main.js"
     ], 
@@ -11,6 +13,5 @@
         "caption": "Simple Machines", 
         "icon": "icons/button.png", 
         "tooltipText": "Takes you to simplemachines.org"
-    }, 
-    "name": "SMF Notifier"
+    }
 }

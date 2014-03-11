@@ -9,6 +9,10 @@
         self.refresh();
     });
 
+    if (kango.storage.getItem('sm_refreshtimeout') !== null) {
+    	self._refreshTimeout = parseInt(kango.storage.getItem('sm_refreshtimeout')) * 60 * 1000;
+    };
+
     window.setInterval(function() {
         self.refresh()
     }, self._refreshTimeout);
@@ -20,7 +24,7 @@ SM_Notifier.prototype = {
         kango.browser.tabs.create({url: 'http://simplemachines.org/'});
     },
 
-    _refreshTimeout: 60 * 1000 * 15, // 15 minutes
+    _refreshTimeout: 60 * 1000 * 15,
     _feedUrl: 'http://www.simplemachines.org/community/index.php?wap2',
 
     _setOffline: function() {
