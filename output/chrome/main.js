@@ -9,23 +9,33 @@
         self.refresh();
     });
 
-    if (kango.storage.getItem('sm_refreshtimeout') !== null) {
-    	self._refreshTimeout = parseInt(kango.storage.getItem('sm_refreshtimeout')) * 60 * 1000;
+    if (kango.storage.getItem('sm_refresh_timeout') !== null) {
+    	self._refreshTimeout = parseInt(kango.storage.getItem('sm_refresh_timeout')) * 60 * 1000;
     };
 
     window.setInterval(function() {
         self.refresh()
-    }, self._refreshTimeout);
+    }, self._getRefreshTimeout());
 }
 
 SM_Notifier.prototype = {
 
+    _defaultRefreshTimeout: 60 * 1000 * 15,
+    _feedUrl: 'http://www.simplemachines.org/community/index.php?wap2',
+
     _redirectToSite: function() {
-        kango.browser.tabs.create({url: 'http://simplemachines.org/'});
+        kango.browser.tabs.create({url: this._getRedirectURL()});
     },
 
-    _refreshTimeout: 60 * 1000 * 15,
-    _feedUrl: 'http://www.simplemachines.org/community/index.php?wap2',
+    _getRedirectURL: function() {
+    	return kango.storage.getItem('sm_redirect_url') !== null ?
+    		kango.storage.getItem('sm_redirect_url') : 'http://simplemachines.org/';
+    },
+
+    _getRefreshTimeout: function() {
+    	return kango.storage.getItem('sm_refresh_timeout') !== null ?
+    		kango.storage.getItem('sm_refresh_timeout') : this._defaultRefreshTimeout;
+    },
 
     _setOffline: function() {
         kango.ui.browserButton.setTooltipText(kango.i18n.getMessage('Offline. Maybe you only need to login on SM.org ?'));
